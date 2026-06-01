@@ -1,0 +1,37 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+*.cache/
+
+# Large VM artifacts — keep these out of git, link in README instead
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.iso
+*.ova
+*.ovf
+
+# Secrets — never commit
+.env
+*.pem
+*.key
+secrets/
+
+# Python (just in case)
+__pycache__/
+*.pyc
