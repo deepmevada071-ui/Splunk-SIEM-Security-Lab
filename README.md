@@ -1,6 +1,10 @@
 # Splunk SIEM Security Lab
 
-> Splunk Enterprise (Free) ingesting Windows event logs via Universal Forwarder. Built a 5-panel security dashboard, ran a brute-force simulation, and wrote SPL correlation queries that detect post-failure successful logins.
+A lab guide for collecting Windows event logs in Splunk, investigating authentication activity, and designing security dashboards.
+
+**Repository contents:** setup guide and example scenarios. Screenshots and exported lab artifacts have not yet been added; the `screenshots/` folder currently contains a placeholder.
+
+[Setup](#step-by-step-setup) · [Screenshots to add](#screenshots) · [Related projects](#related-projects)
 
 ## Overview
 
@@ -180,7 +184,7 @@ index=windows_logs EventCode=4625
 - Trigger: number of results > 0
 - Action: Add to Triggered Alerts (or email)
 
-## Investigation Log
+## Example Investigation Log
 
 | Incident | Event IDs | SPL Used | Finding | Response |
 |---|---|---|---|---|
@@ -199,7 +203,7 @@ index=windows_logs EventCode=4625
 - `06-dashboard.png` — Full IT Security Monitor dashboard
 - `07-alert-triggered.png` — Triggered Alerts page with the brute-force alert
 
-## What I Learned
+## Learning Outcomes
 
 - The full pipeline: source → forwarder → indexer → search → visualization
 - Why correlation queries (failures **and** successes) are more valuable than single-event detections
@@ -208,7 +212,7 @@ index=windows_logs EventCode=4625
 - How a scheduled alert turns a one-off investigation into ongoing monitoring
 - CIA Triad concepts (Confidentiality, Integrity, Availability) applied to actual log data
 
-## Resume Bullet
+## Resume wording (use after completing and verifying the lab)
 
 > Deployed Splunk Enterprise SIEM with Universal Forwarder ingesting Windows Security/System event logs; built a 5-panel security dashboard tracking failed logins, account lockouts, and service health; simulated a brute-force attack and wrote SPL correlation queries to detect post-failure successful logins.
 
